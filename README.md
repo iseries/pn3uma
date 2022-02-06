@@ -27,7 +27,7 @@ Clone the project:
 git clone git@github.com:iseries/Pn3uma.App.git pn3uma
 ```
 
-Go into the created folder with cd pn3uma and install the framework with all necessary dependencies via `composer install`
+Go into the created folder with `cd pn3uma` and install the framework with all necessary dependencies via `composer install`
 
 ## Developer notes
 If you want to develop on this web interface you have to install tailwind on the project's root folder.
