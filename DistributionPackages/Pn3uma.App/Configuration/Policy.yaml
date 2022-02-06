@@ -1,0 +1,12 @@
+privilegeTargets:
+  'Neos\Flow\Security\Authorization\Privilege\Method\MethodPrivilege':
+    'Pn3uma.App:Standard':
+      matcher: 'method(Pn3uma\App\Controller\StandardController->(?!initialize).*Action())'
+
+roles:
+  'Neos.Flow:Everybody':
+    label: Everybody
+    privileges:
+      -
+        privilegeTarget: 'Pn3uma.App:Standard'
+        permission: GRANT

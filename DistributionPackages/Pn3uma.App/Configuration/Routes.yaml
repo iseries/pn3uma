@@ -1,0 +1,8 @@
+-
+  name: 'Frontend'
+  uriPattern: ''
+  defaults:
+    '@package': 'Pn3uma.App'
+    '@controller': 'Frontend\Standard'
+    '@action': 'index'
+    '@format': 'html'

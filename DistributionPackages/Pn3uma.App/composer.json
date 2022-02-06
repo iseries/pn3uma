@@ -1,0 +1,25 @@
+{
+    "description": "pn3uma",
+    "type": "neos-package",
+    "name": "pn3uma/app",
+    "require": {
+        "neos/flow": "~7.1.0",
+        "neos/fluid-adaptor": "~7.1.0"
+    },
+    "require-dev": {
+        "neos/kickstarter": "~7.1.0",
+        "neos/buildessentials": "~7.1.0",
+        "phpunit/phpunit": "~9.0",
+        "mikey179/vfsstream": "~1.6"
+    },
+    "autoload": {
+        "psr-4": {
+            "Pn3uma\\App\\": "Classes/"
+        }
+    },
+    "extra": {
+        "neos": {
+            "package-key": "Pn3uma.App"
+        }
+    }
+}

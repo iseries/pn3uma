@@ -1,0 +1,9 @@
+#Pn3uma:
+#  App:
+Neos:
+  Flow:
+    mvc:
+      routes:
+        'Pn3uma.App': true
+    http:
+      applicationToken: ApplicationName
