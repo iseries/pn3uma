@@ -25,7 +25,7 @@ See: https://github.com/maurosoria/dirsearch#installation--usage
 
 Clone the project:
 ```Shell
-git clone git@github.com:iseries/Pn3uma.App.git pn3uma
+git clone git@github.com:iseries/pn3uma.git pn3uma
 ```
 
 Go into the created folder with `cd pn3uma` and install the framework with all necessary dependencies via `composer install`
