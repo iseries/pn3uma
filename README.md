@@ -1,5 +1,6 @@
-# pn3uma
-A web interface for dirsearch with some extras. This package was developed to get a better overview for scanned directories or files.
+<p><img src="./.github/logo.png" alt="pn4uma"></p>
+
+pn3uma is a web interface for dirsearch with some extras. This package was developed to get a better overview for scanned directories or files.
 
 > _This tool was tested on Linux **only**. If you're using Windows or Mac you have to adjust some commands in the code yourself._
 
@@ -30,10 +31,12 @@ git clone git@github.com:iseries/Pn3uma.App.git pn3uma
 Go into the created folder with `cd pn3uma` and install the framework with all necessary dependencies via `composer install`
 
 ## Developer notes
-If you want to develop on this web interface you have to install tailwind on the project's root folder.
+If you're interested in contributing to pn3uma you have to install tailwind in the project's root folder.
 
 ### Install tailwind
 ```Shell
 npm install -D tailwindcss postcss autoprefixer
 npx tailwindcss init
 ```
+
+Anyway, feel free and raise issues or pull requests.
