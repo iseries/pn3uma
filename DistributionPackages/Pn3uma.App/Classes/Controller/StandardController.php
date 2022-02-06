@@ -1,5 +1,5 @@
 <?php
-namespace Pn3uma\App\Controller\Frontend;
+namespace Pn3uma\App\Controller;
 
 /*
  * This file is part of the Pn3uma.App package.
