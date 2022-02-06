@@ -4,7 +4,7 @@ namespace Pn3uma\App\Controller;
 /*
  * This file is part of the Pn3uma.App package.
  */
-use Pn3uma\App\Controller\Frontend\AbstractBaseController;
+use Pn3uma\App\Controller\AbstractBaseController;
 use Neos\Flow\Annotations as Flow;
 use Neos\Flow\Mvc\Controller\ActionController;
 

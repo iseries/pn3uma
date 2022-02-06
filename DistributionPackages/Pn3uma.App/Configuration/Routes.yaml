@@ -3,6 +3,6 @@
   uriPattern: ''
   defaults:
     '@package': 'Pn3uma.App'
-    '@controller': 'Frontend\Standard'
+    '@controller': 'Standard'
     '@action': 'index'
     '@format': 'html'
