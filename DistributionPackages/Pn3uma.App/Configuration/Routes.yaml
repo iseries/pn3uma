@@ -1,3 +1,4 @@
+# app routes
 -
   name: 'index'
   uriPattern: ''
@@ -33,3 +34,25 @@
     '@controller': 'Standard'
     '@action': 'domainWrite'
     '@format': 'html'
+
+# api routes
+-
+  name: 'api get port response'
+  uriPattern: 'api/port'
+  defaults:
+    '@package': 'Pn3uma.App'
+    '@controller': 'Api'
+    '@action': 'getPortResponse'
+    '@format': 'json'
+  httpMethods: ['POST']
+
+-
+  name: 'api get http response'
+  uriPattern: 'api/http'
+  defaults:
+    '@package': 'Pn3uma.App'
+    '@controller': 'Api'
+    '@action': 'getHttpResponse'
+    '@format': 'json'
+  httpMethods: ['POST']
+

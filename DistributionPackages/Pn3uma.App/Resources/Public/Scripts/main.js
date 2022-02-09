@@ -11,7 +11,7 @@ function checkPort() {
 
 			$.ajax({
 				method: "POST",
-				url: "",
+				url: "api/port",
 				data: {domain: domainUri}
 			}).done(function (data) {
 				var jsonObj = JSON.parse(data);
@@ -34,7 +34,7 @@ function checkHttp() {
 
 			$.ajax({
 				method: "POST",
-				url: "",
+				url: "api/http",
 				data: {domain: domainUri}
 			}).done(function (data) {
 				var jsonObj = JSON.parse(data);
