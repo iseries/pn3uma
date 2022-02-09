@@ -4,7 +4,7 @@
 
 pn3uma is a web interface for dirsearch with some extras. This package was developed to get a better overview for scanned directories or files.
 
-> _This tool was tested on Linux **only**. If you're using Windows or Mac you have to adjust some commands in the code yourself._
+> _This tool was tested on Linux **only**. If you're using Windows or Mac you may have to adjust some commands in the code yourself._
 
 ### Overview
 - [Features](#Features)
