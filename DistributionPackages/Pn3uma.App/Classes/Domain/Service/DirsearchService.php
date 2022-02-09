@@ -30,37 +30,36 @@ class DirsearchService
     }
 
     /**
-     * @param $domains
-     * @return void
+     * @param array $domains
+     * @return string
      */
-    public function writeUrlsTxt($domains) {
+    public function writeUrlsTxt(array $domains): string
+    {
         // define variables
         $filePath = $this->settings['dirsearch']['fileToSaveUrlsPath'];
         $fileName = $this->settings['dirsearch']['fileToSaveUrlsName'];
         $file = $filePath.$fileName;
 
         // collect domains
+        $domainToWrite = '';
         foreach($domains as $domain) {
-            $domains .= $domain.PHP_EOL;
+            $domainToWrite .= $domain.PHP_EOL;
         }
 
         // try to write the txt file
         if (is_writable($file)) {
             if (!$fp = fopen($file, 'w')) {
-                echo "Cannot open file ($fileName)";
-                exit;
+                return 'Cannot open file ('.$fileName.').';
             }
 
-            if (fwrite($fp, $domains) === FALSE) {
-                echo "Cannot write to file ($fileName)";
-                exit;
+            if (fwrite($fp, $domainToWrite) === FALSE) {
+                return 'Cannot write to file ('.$fileName.').';
             }
-
-            echo "Success";
 
             fclose($fp);
+            return 'The file ('.$fileName.') was updated successfully.';
         } else {
-            echo "The file $fileName is not writable";
+            return 'The file ('.$fileName.') is not writable.';
         }
     }
 }
