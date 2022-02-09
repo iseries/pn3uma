@@ -22,8 +22,8 @@ pn3uma is a web interface for dirsearch with some extras. This package was devel
 - scan for subdomain
 - check for open port
 - check HTTP header
-- create Lists
-- review Errors
+- create lists
+- review errors
 - review and analyse reports (filter, sort or search)
 
 ### Requirements
