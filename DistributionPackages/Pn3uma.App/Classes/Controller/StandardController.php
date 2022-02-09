@@ -50,7 +50,7 @@ class StandardController extends AbstractBaseController
     {
         if($this->request->hasArgument('domain')) {
             $domain = $this->request->getArgument('domain');
-            $jsonResponse = file_get_contents("https://sonar.omnisint.io/subdomains/".$domain);
+            $jsonResponse = $this->networkService->checkSubdomains($domain);
             $this->view->assign('domains', json_decode($jsonResponse));
         }
     }

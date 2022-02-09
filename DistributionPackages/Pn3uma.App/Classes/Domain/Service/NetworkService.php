@@ -85,4 +85,15 @@ class NetworkService
             'response' => $response
         );
     }
+
+
+    /**
+     * check port
+     * @param string $domain
+     * @return string
+     */
+    public function checkSubdomains(string $domain = ''): string
+    {
+        return file_get_contents("https://sonar.omnisint.io/subdomains/".$domain);
+    }
 }
