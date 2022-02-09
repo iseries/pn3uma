@@ -39,6 +39,12 @@ If you're interested in contributing to pn3uma you have to install tailwind in t
 ```Shell
 npm install -D tailwindcss postcss autoprefixer
 npx tailwindcss init
+npm run build
+```
+
+#### Build tailwind css
+```Shell
+npm run build
 ```
 
 ### Contribution
