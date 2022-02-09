@@ -1,0 +1,54 @@
+<f:layout name="Default"/>
+
+<f:section name="Title">Subdomains</f:section>
+
+<f:section name="Content">
+	<section>
+		<f:form controller="Standard" action="domainWrite" method="post">
+			<div class="px-5 py-4">
+				<div class="flex justify-between items-center pb-4">
+					<h1 class="text-2xl">Search for domains</h1>
+					<div class="flex">
+						<div id="check-port" class="bg-neutral-500 hover:bg-neutral-700 text-white font-bold py-2 px-4 rounded ml-3 cursor-pointer">
+							Scan port
+						</div>
+						<div id="check-http" class="bg-neutral-500 hover:bg-neutral-700 text-white font-bold py-2 px-4 rounded ml-3 cursor-pointer">
+							Check HTTP headers
+						</div>
+						<button type="submit" class="bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded ml-3">
+							Write urls.txt
+						</button>
+					</div>
+				</div>
+
+				<div class="flex flex-col bg-neutral-700 rounded-md p-4">
+					<div class="flex justify-between border-b border-neutral-600">
+						<div class="w-1/12 font-bold">Controls</div>
+						<div class="w-5/12 font-bold">Domain</div>
+						<div class="w-3/12 font-bold">Open Port</div>
+						<div class="w-3/12 font-bold">HTTP Headers</div>
+					</div>
+
+					<f:for each="{domains}" iteration="item" as="domain">
+						<label class="flex justify-between border-b border-neutral-600">
+							<div class="w-1/12">
+								<label class="item_{item.index}">
+									<input class="rounded border-gray-300 text-green-600 shadow-sm focus:border-green-300 focus:ring focus:ring-offset-0 focus:ring-green-200 focus:ring-opacity-0" type="checkbox" name="check_domain[]" value="https://{domain}">
+								</label>
+							</div>
+							<div class="w-5/12">
+								{domain}
+							</div>
+							<div class="port w-3/12">
+								?
+							</div>
+							<div class="http w-3/12">
+								?
+							</div>
+						</label>
+					</f:for>
+				</div>
+			</div>
+		</f:form>
+	</section>
+</f:section>

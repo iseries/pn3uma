@@ -1,0 +1,16 @@
+<f:layout name="Default" />
+
+<f:section name="Title">Search Domain</f:section>
+
+<f:section name="Content">
+	<section>
+		<!-- no domain is given -->
+		<div class="px-5 py-4">
+			<f:form controller="standard" action="domainSearch" method="post">
+				<h1 class="text-2xl mb-4">Search for domains</h1>
+				<input class="rounded-md border border-neutral-700 bg-neutral-900 p-2" name="domain">
+				<button class="bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded ml-3">Submit</button>
+			</f:form>
+		</div>
+	</section>
+</f:section>
