@@ -1,0 +1,19 @@
+{
+    "name": "pn3uma",
+    "short_name": "pn3uma",
+    "icons": [
+        {
+            "src": "/_Resources/Static/Packages/Pn3uma.App/Images/Icons/android-chrome-192x192.png",
+            "sizes": "192x192",
+            "type": "image/png"
+        },
+        {
+            "src": "/_Resources/Static/Packages/Pn3uma.App/Images/Icons/android-chrome-512x512.png",
+            "sizes": "512x512",
+            "type": "image/png"
+        }
+    ],
+    "theme_color": "#ffffff",
+    "background_color": "#ffffff",
+    "display": "standalone"
+}
