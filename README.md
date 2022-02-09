@@ -1,6 +1,7 @@
 <p><img src="./.github/logo.png" alt="pn4uma"></p>
-[![GitHub issues](https://img.shields.io/github/issues/iseries/pn3uma)](https://github.com/iseries/pn3uma/issues)
-[![GitHub license](https://img.shields.io/github/license/iseries/pn3uma)](https://github.com/iseries/pn3uma)
+<a href="https://github.com/iseries/pn3uma/issues"><img alt="GitHub issues" src="https://img.shields.io/github/issues/iseries/pn3uma"></a>
+<a href="https://github.com/iseries/pn3uma"><img alt="GitHub license" src="https://img.shields.io/github/license/iseries/pn3uma"></a>
+<a href="https://github.com/iseries/pn3uma/releases"><img src="https://img.shields.io/badge/version-not released-orange" alt="Latest Stable Version"></a>
 
 ⚠️ **This package is under development.** ⚠️
 
