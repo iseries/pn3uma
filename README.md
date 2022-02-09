@@ -6,6 +6,18 @@ pn3uma is a web interface for dirsearch with some extras. This package was devel
 
 > _This tool was tested on Linux **only**. If you're using Windows or Mac you have to adjust some commands in the code yourself._
 
+### Overview
+- [Features](#Features)
+- [Requirements](#Requirements)
+- [Installation](#Installation)
+  - [Install dirsearch](#Install-dirsearch)
+  - [Install pn3uma](#Install-pn3uma)
+  - [Settings](#Settings)
+- [Developer notes](#Developer-notes)
+  - [Install tailwind](#Install-tailwind)
+  - [Build tailwind css](#Build-tailwind-css)
+- [Contribution](#Contribution)
+
 ### Features
 - scan for subdomain
 - check for open port
@@ -17,19 +29,18 @@ pn3uma is a web interface for dirsearch with some extras. This package was devel
 ### Requirements
 - [dirsearch](https://github.com/maurosoria/dirsearch) has to be installed on your local machine.
 - running a local LAMP
+- composer
 - pn3uma is based on a PHP-Framework - check the [flow requirements](https://flowframework.readthedocs.io/en/stable/TheDefinitiveGuide/PartII/Requirements.html).
 
 ### Installation
-#### 1. Install dirsearch
+#### Install dirsearch
 See: https://github.com/maurosoria/dirsearch#installation--usage
 
-#### 2. Install pn3uma
-
-#### Clone the project:
+#### Install pn3uma
+Clone the project:
 ```Shell
 git clone git@github.com:iseries/pn3uma.git pn3uma
 ```
-
 Go into the created folder with `cd pn3uma` and install the framework with all necessary dependencies via `composer install`
 
 #### Settings
