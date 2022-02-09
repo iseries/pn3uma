@@ -1,4 +1,6 @@
 <p><img src="./.github/logo.png" alt="pn4uma"></p>
+[![GitHub issues](https://img.shields.io/github/issues/iseries/pn3uma)](https://github.com/iseries/pn3uma/issues)
+[![GitHub license](https://img.shields.io/github/license/iseries/pn3uma)](https://github.com/iseries/pn3uma)
 
 ⚠️ **This package is under development.** ⚠️
 
