@@ -4,7 +4,8 @@
     "name": "pn3uma/app",
     "require": {
         "neos/flow": "~7.1.0",
-        "neos/fluid-adaptor": "~7.1.0"
+        "neos/fluid-adaptor": "~7.1.0",
+        "rakibtg/sleekdb": "^2.13"
     },
     "require-dev": {
         "neos/kickstarter": "~7.1.0",
@@ -20,6 +21,11 @@
     "extra": {
         "neos": {
             "package-key": "Pn3uma.App"
+        }
+    },
+    "config": {
+        "allow-plugins": {
+            "neos/composer-plugin": true
         }
     }
 }
