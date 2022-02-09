@@ -1,0 +1,17 @@
+/*
+ * Tailwind
+ * ########################
+ */
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/*
+ * Adjustments
+ * ########################
+ */
+
+html, body {
+    @apply bg-neutral-800 text-green-100;
+}
