@@ -1,5 +1,9 @@
-#Pn3uma:
-#  App:
+Pn3uma:
+  App:
+    network:
+      port: 443
+    dirsearch:
+      fileToSaveUrls: '/var/www/tools.local/files/urls.tx'
 Neos:
   Flow:
     mvc:

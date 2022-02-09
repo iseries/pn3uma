@@ -1,8 +1,35 @@
 -
-  name: 'Frontend'
+  name: 'index'
   uriPattern: ''
   defaults:
     '@package': 'Pn3uma.App'
     '@controller': 'Standard'
     '@action': 'index'
+    '@format': 'html'
+
+-
+  name: 'domain'
+  uriPattern: 'domain'
+  defaults:
+    '@package': 'Pn3uma.App'
+    '@controller': 'Standard'
+    '@action': 'domain'
+    '@format': 'html'
+
+-
+  name: 'domain search'
+  uriPattern: 'domain/search'
+  defaults:
+    '@package': 'Pn3uma.App'
+    '@controller': 'Standard'
+    '@action': 'domainSearch'
+    '@format': 'html'
+
+-
+  name: 'writeUrls'
+  uriPattern: 'domain/write'
+  defaults:
+    '@package': 'Pn3uma.App'
+    '@controller': 'Standard'
+    '@action': 'domainWrite'
     '@format': 'html'
