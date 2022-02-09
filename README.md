@@ -25,12 +25,15 @@ See: https://github.com/maurosoria/dirsearch#installation--usage
 
 #### 2. Install pn3uma
 
-Clone the project:
+#### Clone the project:
 ```Shell
 git clone git@github.com:iseries/pn3uma.git pn3uma
 ```
 
 Go into the created folder with `cd pn3uma` and install the framework with all necessary dependencies via `composer install`
+
+#### Settings
+If you want to have a look in pn3uma settings you can find them in `DistributionPackages/Pn3uma.App/Configuration/Settings.yaml`
 
 ### Developer notes
 If you're interested in developing pn3uma you have to install tailwind in the project's root folder.
