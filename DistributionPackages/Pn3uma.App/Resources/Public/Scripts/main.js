@@ -11,16 +11,15 @@ function checkPort() {
 
 			$.ajax({
 				method: "POST",
-				url: "api/port",
+				url: "/api/port",
 				data: {domain: domainUri}
 			}).done(function (data) {
-				var jsonObj = JSON.parse(data);
-				if (jsonObj.status === false) {
+				if (data.status === false) {
 					targetEl.addClass('text-red-500');
 				} else {
 					targetEl.addClass('text-green-500');
 				}
-				targetEl.html(jsonObj.response);
+				targetEl.html(data.response);
 			});
 		});
 	});
@@ -34,26 +33,25 @@ function checkHttp() {
 
 			$.ajax({
 				method: "POST",
-				url: "api/http",
+				url: "/api/http",
 				data: {domain: domainUri}
 			}).done(function (data) {
-				var jsonObj = JSON.parse(data);
-				if (jsonObj.status === false) {
+				if (data.status === false) {
 					targetEl.addClass('text-red-500');
 				}
 
 				var fullHeaderResponse = '<div class="cursor-pointer group">';
 
-				if (Array.isArray(jsonObj.response)) {
-					fullHeaderResponse += '<div class="flex">' + jsonObj.response[0] + '</div><div class="absolute bg-neutral-800 rounded-sm hidden group-hover:block">';
-					$.each(jsonObj.response, function (index, value) {
+				if (Array.isArray(data.response)) {
+					fullHeaderResponse += '<div class="flex">' + data.response[0] + '</div><div class="absolute bg-neutral-800 rounded-sm hidden group-hover:block">';
+					$.each(data.response, function (index, value) {
 						if (index > 0) {
 							fullHeaderResponse += '<span class="flex text-sm text-neutral-500 z-2 px-2">' + value + '</span>';
 						}
 					});
 					fullHeaderResponse += '</div>';
 				} else {
-					fullHeaderResponse += '<div class="flex">' + jsonObj.response + '</div>';
+					fullHeaderResponse += '<div class="flex">' + data.response + '</div>';
 				}
 
 				fullHeaderResponse += '</div>';
