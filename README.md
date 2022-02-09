@@ -33,7 +33,7 @@ git clone git@github.com:iseries/pn3uma.git pn3uma
 Go into the created folder with `cd pn3uma` and install the framework with all necessary dependencies via `composer install`
 
 ### Developer notes
-If you're interested in contributing to pn3uma you have to install tailwind in the project's root folder.
+If you're interested in developing pn3uma you have to install tailwind in the project's root folder.
 
 #### Install tailwind
 ```Shell
