@@ -3,7 +3,8 @@ Pn3uma:
     network:
       port: 443
     dirsearch:
-      fileToSaveUrls: '/var/www/tools.local/files/urls.tx'
+      fileToSaveUrlsPath: '/var/www/tools.local/files/'
+      fileToSaveUrlsName: 'urls.txt'
 Neos:
   Flow:
     mvc:

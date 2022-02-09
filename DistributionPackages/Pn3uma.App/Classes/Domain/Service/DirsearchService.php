@@ -14,24 +14,45 @@ use Neos\Flow\Annotations as Flow;
  */
 class DirsearchService
 {
+
+    /**
+     * @var array
+     */
+    protected $settings;
+
+    /**
+     * Inject the settings
+     * @param array $settings
+     * @return void
+     */
+    public function injectSettings(array $settings) {
+        $this->settings = $settings;
+    }
+
     /**
      * @param $domains
      * @return void
      */
     public function writeUrlsTxt($domains) {
+        // define variables
+        $filePath = $this->settings['dirsearch']['fileToSaveUrlsPath'];
+        $fileName = $this->settings['dirsearch']['fileToSaveUrlsName'];
+        $file = $filePath.$fileName;
+
+        // collect domains
         foreach($domains as $domain) {
             $domains .= $domain.PHP_EOL;
         }
 
-        $filename = '/var/www/tools.local/files/urls.txt';
-        if (is_writable($filename)) {
-            if (!$fp = fopen($filename, 'w')) {
-                echo "Cannot open file ($filename)";
+        // try to write the txt file
+        if (is_writable($file)) {
+            if (!$fp = fopen($file, 'w')) {
+                echo "Cannot open file ($fileName)";
                 exit;
             }
 
             if (fwrite($fp, $domains) === FALSE) {
-                echo "Cannot write to file ($filename)";
+                echo "Cannot write to file ($fileName)";
                 exit;
             }
 
@@ -39,7 +60,7 @@ class DirsearchService
 
             fclose($fp);
         } else {
-            echo "The file $filename is not writable";
+            echo "The file $fileName is not writable";
         }
     }
 }

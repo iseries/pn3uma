@@ -18,6 +18,20 @@ class NetworkService
     const DOMAIN_GIVEN = true;
 
     /**
+     * @var array
+     */
+    protected $settings;
+
+    /**
+     * Inject the settings
+     * @param array $settings
+     * @return void
+     */
+    public function injectSettings(array $settings) {
+        $this->settings = $settings;
+    }
+
+    /**
      * check port
      * @param string $domain
      * @return array
@@ -29,7 +43,7 @@ class NetworkService
 
         if($domain) {
             $host = trim(str_replace('https://', '', $domain));
-            $port = 443;
+            $port = $this->settings['network']['port'];
             $response = 'Port '.$port.' is closed';
 
             $connection = @fsockopen($host, $port);
