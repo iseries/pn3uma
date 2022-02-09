@@ -41,4 +41,5 @@ npm install -D tailwindcss postcss autoprefixer
 npx tailwindcss init
 ```
 
+### Contribution
 Anyway, feel free and raise issues or pull requests.
