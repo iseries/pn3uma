@@ -17,7 +17,7 @@ pn3uma is a web interface for dirsearch with some extras. This package was devel
 ### Requirements
 - [dirsearch](https://github.com/maurosoria/dirsearch) has to be installed on your local machine.
 - running a local LAMP
-- this app is based on a PHP-Framework - check the [flow requirements](https://flowframework.readthedocs.io/en/stable/TheDefinitiveGuide/PartII/Requirements.html).
+- pn3uma is based on a PHP-Framework - check the [flow requirements](https://flowframework.readthedocs.io/en/stable/TheDefinitiveGuide/PartII/Requirements.html).
 
 ### Installation
 #### 1. Install dirsearch
