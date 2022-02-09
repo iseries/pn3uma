@@ -14,7 +14,7 @@ pn3uma is a web interface for dirsearch with some extras. This package was devel
   - [Install pn3uma](#Install-pn3uma)
   - [Settings](#Settings)
 - [Developer notes](#Developer-notes)
-  - [Install tailwind](#Install-tailwind)
+  - [Install tailwind and Plugins](#Install-tailwind-and-plugins)
   - [Build tailwind css](#Build-tailwind-css)
 - [Contribution](#Contribution)
 
@@ -49,10 +49,9 @@ If you want to have a look in pn3uma settings you can find them in `Distribution
 ### Developer notes
 If you're interested in developing pn3uma you have to install tailwind in the project's root folder.
 
-#### Install tailwind
+#### Install tailwind and plugins
 ```Shell
-npm install -D tailwindcss postcss autoprefixer
-npx tailwindcss init
+npm install
 npm run build
 ```
 
