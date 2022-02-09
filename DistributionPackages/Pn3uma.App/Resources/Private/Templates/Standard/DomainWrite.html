@@ -1,7 +1,11 @@
 <f:layout name="Default" />
 
-<f:section name="Title">Write Urls</f:section>
+<f:section name="Title">write domains to txt file</f:section>
 
 <f:section name="Content">
-	test
+	<div class="px-5 py-4">
+		<div class="p-4 {f:if(condition: '{response.status} === true', then: 'bg-green-600', else: 'bg-red-600')} text-white rounded">
+			{response.message}
+		</div>
+	</div>
 </f:section>

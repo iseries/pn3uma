@@ -61,9 +61,16 @@ class StandardController extends AbstractBaseController
      */
     public function domainWriteAction()
     {
+        $response = 'No domain selected';
+        $domainsFound = false;
+
         if($this->request->hasArgument('check_domain')) {
-            $urls = $this->request->getArgument('check_domains');
-            $this->dirsearchService->writeUrlsTxt($urls);
+            $urls = $this->request->getArgument('check_domain');
+            if(is_array($urls)) {
+                $response = $this->dirsearchService->writeUrlsTxt($urls);
+                $domainsFound = true;
+            }
         }
+        $this->view->assign('response', array('message' => $response, 'status' => $domainsFound));
     }
 }
