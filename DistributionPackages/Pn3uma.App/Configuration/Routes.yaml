@@ -35,6 +35,15 @@
     '@action': 'domainWrite'
     '@format': 'html'
 
+-
+  name: 'wordlists'
+  uriPattern: 'wordlists'
+  defaults:
+    '@package': 'Pn3uma.App'
+    '@controller': 'Standard'
+    '@action': 'wordlists'
+    '@format': 'html'
+
 # api routes
 -
   name: 'api get port response'

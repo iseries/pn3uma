@@ -37,6 +37,14 @@ class StandardController extends AbstractBaseController
     /**
      * @return void
      */
+    public function wordlistsAction()
+    {
+
+    }
+
+    /**
+     * @return void
+     */
     public function domainAction()
     {
 
