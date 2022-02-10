@@ -28,4 +28,21 @@ class Pn3umaCommandController extends CommandController
      */
     protected $consoleOutput;
 
+    /**
+     * Import wordlists
+     */
+    public function importWordlists()
+    {
+        $response = null;
+        while (!in_array($response, ['y', 'n'])) {
+            $response = $this->output->ask('Remove already imported wordlists? (y/n/c)');
+        }
+        // handle the response
+        switch ($response) {
+            case 'y':
+                // do something
+            case 'n':
+                // do something
+        }
+    }
 }

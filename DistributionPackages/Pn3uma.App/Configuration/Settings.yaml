@@ -1,10 +1,17 @@
 Pn3uma:
   App:
+    sleekDB:
+      database: 'pn3uma'
+      stores:
+        domains: domains
+        results: results
+        favourites: favorites
     network:
       port: 443
     dirsearch:
       fileToSaveUrlsPath: '/var/www/tools.local/files/'
       fileToSaveUrlsName: 'urls.txt'
+
 Neos:
   Flow:
     mvc:
