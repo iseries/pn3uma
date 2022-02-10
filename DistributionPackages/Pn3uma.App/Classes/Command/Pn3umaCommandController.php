@@ -13,9 +13,16 @@ use Neos\Flow\Cli\Request;
 use Neos\Flow\Cli\Response;
 use Neos\Flow\Persistence\PersistenceManagerInterface as PersistenceManagerInterface;
 use Neos\Flow\Mvc\Routing\ObjectPathMappingRepository as ObjectPathMappingRepository;
+use Pn3uma\App\Domain\Service\WordlistService;
 
 class Pn3umaCommandController extends CommandController
 {
+    /**
+     * @Flow\Inject
+     * @var WordlistService
+     */
+    protected $wordlistService;
+
     /**
      * @Flow\Inject
      * @var PersistenceManagerInterface
@@ -31,18 +38,24 @@ class Pn3umaCommandController extends CommandController
     /**
      * Import wordlists
      */
-    public function importWordlists()
+    public function importWordlistsCommand()
     {
         $response = null;
+
         while (!in_array($response, ['y', 'n'])) {
-            $response = $this->output->ask('Remove already imported wordlists? (y/n/c)');
+            $response = $this->output->ask('Remove already imported wordlists? (y/n)');
         }
-        // handle the response
+
+        $pruneImportedWordlists = false;
         switch ($response) {
             case 'y':
-                // do something
-            case 'n':
-                // do something
+                $pruneImportedWordlists = true;
+            default:
         }
+
+        $files = $this->wordlistService->getFilesToImport();
+
+        \Neos\Flow\var_dump($pruneImportedWordlists);
+
     }
 }
