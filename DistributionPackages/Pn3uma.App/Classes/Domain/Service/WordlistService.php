@@ -8,7 +8,7 @@ namespace Pn3uma\App\Domain\Service;
 use Neos\Flow\Annotations as Flow;
 
 /**
- * Service for handle wordlists
+ * Service for handle Wordlist
  * @Flow\Scope("singleton")
  * @api
  */
@@ -32,54 +32,55 @@ class WordlistService
     /**
      * @return string
      */
-    private function getPathToImportDir(): string
+    public function getPathToImportDir(): string
     {
-        return FLOW_PATH_ROOT . 'DistributionPackages/Pn3uma.App/Resources/Private/Import/Wordlists';
+        return FLOW_PATH_ROOT . $this->settings['Wordlist']['pathToImportDir'];
     }
 
     /**
      * @return string
      */
-    private function getPathToImportTargetDir(): string
+    public function getPathToImportTargetDir(): string
     {
-        return FLOW_PATH_DATA.'Wordlist';
+        return FLOW_PATH_DATA . 'Wordlist';
     }
 
     /**
+     * @param string $wordlistDir
      * @param array $results
      * @param string $currentDir
      * @return array
      */
-    public function getFilesToImport(array &$results = array(), string $currentDir = ''): array
+    public function getFileListFromDir(string $wordlistDir, array &$results = array(), string $currentDir = ''): array
     {
-        $wordlistDir = $this->getPathToImportDir();
         $files = scandir($wordlistDir);
 
         foreach ($files as $key => $value) {
             $path = realpath($wordlistDir . DIRECTORY_SEPARATOR . $value);
             if (!is_dir($path)) {
-                if($currentDir == '') {
+                if($currentDir !== '') {
+                    $results[$currentDir][$key]['name'] = $value;
+                    $results[$currentDir][$key]['path'] = $path;
+                } else {
                     $results[$key]['name'] = $value;
                     $results[$key]['path'] = $path;
-                } else {
-                    $results[$currentDir][$key] = array('name' => $value, 'path' => $path);
                 }
             } else if ($value != "." && $value != "..") {
                 $currentDir = basename($path);
-                $this->getFilesToImport( $results, $currentDir);
+                $this->getFileListFromDir($path, $results, $currentDir);
             }
         }
         return $results;
     }
 
     /**
-     * @param array $files
      * @param bool $prune
      * @return boolean
      */
-    public function importFiles(array $files, bool $prune = false): bool
+    public function importFiles(bool $prune = false): bool
     {
         $response = false;
+        $sourceImportDir = $this->getPathToImportDir();
         $targetImportDir = $this->getPathToImportTargetDir();
 
         if($prune) {
@@ -88,10 +89,19 @@ class WordlistService
 
         if (!file_exists($targetImportDir)) {
             mkdir($targetImportDir, 0777, true);
-            $response = true;
         }
 
-        return $response;
+        return $this->moveDirsAndFiles($sourceImportDir, $targetImportDir);
+    }
+
+    /**
+     * @param string $source
+     * @param string $targetImportDir
+     * @return boolean
+     */
+    private function moveDirsAndFiles(string $source, string $targetImportDir): bool
+    {
+        return rename($source, $targetImportDir);
     }
 
     /**
@@ -103,9 +113,11 @@ class WordlistService
         if (! is_dir($dirPath)) {
             return false;
         }
+
         if (substr($dirPath, strlen($dirPath) - 1, 1) != '/') {
             $dirPath .= '/';
         }
+
         $files = glob($dirPath . '*', GLOB_MARK);
         foreach ($files as $file) {
             if (is_dir($file)) {

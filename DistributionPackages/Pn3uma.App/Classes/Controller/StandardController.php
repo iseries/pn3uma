@@ -37,7 +37,7 @@ class StandardController extends AbstractBaseController
     /**
      * @return void
      */
-    public function wordlistsAction()
+    public function WordlistAction()
     {
 
     }

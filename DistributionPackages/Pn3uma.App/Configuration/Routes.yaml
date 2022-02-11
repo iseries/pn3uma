@@ -36,12 +36,12 @@
     '@format': 'html'
 
 -
-  name: 'wordlists'
-  uriPattern: 'wordlists'
+  name: 'Wordlist'
+  uriPattern: 'Wordlist'
   defaults:
     '@package': 'Pn3uma.App'
     '@controller': 'Standard'
-    '@action': 'wordlists'
+    '@action': 'Wordlist'
     '@format': 'html'
 
 # api routes

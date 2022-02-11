@@ -36,26 +36,27 @@ class Pn3umaCommandController extends CommandController
     protected $consoleOutput;
 
     /**
-     * Import wordlists
+     * Import Wordlists
      */
-    public function importWordlistsCommand()
+    public function importWordlistCommand()
     {
         $response = null;
 
         while (!in_array($response, ['y', 'n'])) {
-            $response = $this->output->ask('Remove already imported wordlists? (y/n)');
+            $response = $this->output->ask('Remove already imported Wordlist? (y/n)');
         }
 
-        $pruneImportedWordlists = false;
-        switch ($response) {
-            case 'y':
-                $pruneImportedWordlists = true;
-            default:
+        $pruneImportedWordlist = false;
+        if($response === 'y') {
+            $pruneImportedWordlist = true;
         }
 
-        $files = $this->wordlistService->getFilesToImport();
+        $fileImport = $this->wordlistService->importFiles($pruneImportedWordlist);
 
-        \Neos\Flow\var_dump($pruneImportedWordlists);
-
+        if($fileImport) {
+            $this->outputLine('wordlist imported.');
+        } else {
+            $this->outputLine('Could not import wordlist');
+        }
     }
 }

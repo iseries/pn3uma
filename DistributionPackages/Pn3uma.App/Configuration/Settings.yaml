@@ -8,6 +8,8 @@ Pn3uma:
         favourites: favorites
     network:
       port: 443
+    Wordlist:
+      pathToImportDir: 'DistributionPackages/Pn3uma.App/Resources/Private/Import/Wordlist'
     dirsearch:
       fileToSaveUrlsPath: '/var/www/tools.local/files/'
       fileToSaveUrlsName: 'urls.txt'
