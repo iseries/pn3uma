@@ -18,7 +18,7 @@ pn3uma is a web interface for dirsearch with some extras. This package was devel
   - [Install pn3uma](#Install-pn3uma)
   - [Settings](#Settings)
 - [Developer notes](#Developer-notes)
-  - [Install tailwind and Plugins](#Install-tailwind-and-plugins)
+  - [Install dependencies for dev](#Install-dependencies-for-dev)
   - [Build tailwind css](#Build-tailwind-css)
 - [Contribution](#Contribution)
 
