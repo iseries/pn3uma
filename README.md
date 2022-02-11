@@ -50,7 +50,7 @@ git clone git@github.com:iseries/pn3uma.git pn3uma
 Go into the created folder with `cd pn3uma` and install the framework with all necessary dependencies via `composer install`
 
 #### 3. Import wordlist
-pn3uma is shipped with some basic wordlists from SecLists. If you want to use your own lists, place them in `DistributionPackages/Pn3uma.App/Resources/Private/Import/Worldlist`.
+pn3uma is shipped with some basic wordlists from [SecLists](https://github.com/danielmiessler/SecLists). If you want to use your own lists, place them in `DistributionPackages/Pn3uma.App/Resources/Private/Import/Worldlist`.
 > Important: Note that pn3uma can only handle one nested directory in the `Wordlist` folder atm.
 
 Start an initial import:
