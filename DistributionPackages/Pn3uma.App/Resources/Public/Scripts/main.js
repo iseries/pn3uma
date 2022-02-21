@@ -1,7 +1,5 @@
-import jQuery from "Vendors/jquery.min";
-import {Tabulator} from 'Vendors/tabulator.min';
-
-window.$ = window.jQuery = jQuery;
+import './jquery.min.js';
+import * as Tabulator from './Vendors/tabulator.min.js';
 
 $(document).ready(function () {
 	checkHttp();
