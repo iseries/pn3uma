@@ -58,13 +58,10 @@ class WordlistService
         foreach ($files as $key => $value) {
             $path = realpath($wordlistDir . DIRECTORY_SEPARATOR . $value);
             if (!is_dir($path)) {
-                if($currentDir !== '') {
-                    $results[$currentDir][$key]['name'] = $value;
-                    $results[$currentDir][$key]['path'] = $path;
-                } else {
-                    $results[$key]['name'] = $value;
-                    $results[$key]['path'] = $path;
-                }
+                $results[$key]['name'] = $value;
+                $results[$key]['path'] = $path;
+                $results[$key]['dir'] = $currentDir;
+                $results[$key]['size'] = filesize($path);
             } else if ($value != "." && $value != "..") {
                 $currentDir = basename($path);
                 $this->getFileListFromDir($path, $results, $currentDir);

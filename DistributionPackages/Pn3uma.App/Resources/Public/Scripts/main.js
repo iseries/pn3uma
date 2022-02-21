@@ -1,3 +1,8 @@
+import jQuery from "Vendors/jquery.min";
+import {Tabulator} from 'Vendors/tabulator.min';
+
+window.$ = window.jQuery = jQuery;
+
 $(document).ready(function () {
 	checkHttp();
 	checkPort();

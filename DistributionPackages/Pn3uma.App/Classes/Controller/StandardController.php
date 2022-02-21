@@ -11,6 +11,7 @@ use Pn3uma\App\Domain\Service\DirsearchService;
 use Pn3uma\App\Domain\Service\NetworkService;
 use Neos\Flow\Annotations as Flow;
 use Neos\Flow\Mvc\Controller\ActionController;
+use Pn3uma\App\Domain\Service\WordlistService;
 
 class StandardController extends AbstractBaseController
 {
@@ -19,6 +20,12 @@ class StandardController extends AbstractBaseController
      * @var DirsearchService
      */
     protected $dirsearchService;
+
+    /**
+     * @Flow\Inject
+     * @var WordlistService
+     */
+    protected $wordlistService;
 
     /**
      * @Flow\Inject
@@ -37,9 +44,11 @@ class StandardController extends AbstractBaseController
     /**
      * @return void
      */
-    public function WordlistAction()
+    public function wordlistAction()
     {
-
+        $wordlistDir = $this->wordlistService->getPathToImportTargetDir();
+        $wordlist = $this->wordlistService->getFileListFromDir($wordlistDir);
+        $this->view->assign('wordlist', $wordlist);
     }
 
     /**
@@ -81,4 +90,21 @@ class StandardController extends AbstractBaseController
         }
         $this->view->assign('response', array('message' => $response, 'status' => $domainsFound));
     }
+
+    /**
+     * @return void
+     */
+    public function reportsAction()
+    {
+
+    }
+
+    /**
+     * @return void
+     */
+    public function favoritesAction()
+    {
+
+    }
+
 }

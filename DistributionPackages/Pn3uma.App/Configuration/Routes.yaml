@@ -37,11 +37,29 @@
 
 -
   name: 'Wordlist'
-  uriPattern: 'Wordlist'
+  uriPattern: 'wordlist'
   defaults:
     '@package': 'Pn3uma.App'
     '@controller': 'Standard'
-    '@action': 'Wordlist'
+    '@action': 'wordlist'
+    '@format': 'html'
+
+-
+  name: 'Favorites'
+  uriPattern: 'favorites'
+  defaults:
+    '@package': 'Pn3uma.App'
+    '@controller': 'Standard'
+    '@action': 'favorites'
+    '@format': 'html'
+
+-
+  name: 'Reports'
+  uriPattern: 'reports'
+  defaults:
+    '@package': 'Pn3uma.App'
+    '@controller': 'Standard'
+    '@action': 'reports'
     '@format': 'html'
 
 # api routes
