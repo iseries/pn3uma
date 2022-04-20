@@ -17,11 +17,27 @@
 				</div>
 			</div>
 
-			<ul>
+			<table id="wordlist-table">
+				<thead>
+				<tr>
+					<th>Filename</th>
+					<th>Size (Bytes)</th>
+					<th>Path</th>
+					<th>Directory</th>
+					<th>Action</th>
+				</tr>
+				</thead>
+				<tbody>
 				<f:for each="{wordlist}" as="item">
-					<li>{item.name} ({item.size} Bytes)</li>
+					<tr>
+						<td>{item.name}</td>
+						<td>{item.size}</td>
+						<td>{item.path}</td>
+						<td>{item.dir}</td>
+					</tr>
 				</f:for>
-			</ul>
+				</tbody>
+			</table>
 		</div>
 	</section>
 </f:section>

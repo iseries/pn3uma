@@ -15,3 +15,20 @@
 html, body {
     @apply bg-neutral-800 text-green-100;
 }
+
+/*
+ * Tabulator overrides
+ * ########################
+ */
+
+.tabulator .tabulator-footer {
+  display: flex !important;
+}
+
+.tabulator .tabulator-footer .tabulator-page-size {
+  padding: 2px 30px 2px 8px !important;
+}
+
+.tabulator-row .tabulator-cell {
+  cursor: auto !important;
+}

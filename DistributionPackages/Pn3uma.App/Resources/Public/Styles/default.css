@@ -4,7 +4,7 @@
  */
 
 /*
- ! tailwindcss v3.0.19 | MIT License | https://tailwindcss.com
+ ! tailwindcss v3.0.23 | MIT License | https://tailwindcss.com
  */
 
 /*
@@ -664,6 +664,10 @@ select {
   display: flex;
 }
 
+.table {
+  display: table;
+}
+
 .hidden {
   display: none;
 }
@@ -890,6 +894,23 @@ html, body {
   background-color: rgb(38 38 38 / var(--tw-bg-opacity));
   --tw-text-opacity: 1;
   color: rgb(220 252 231 / var(--tw-text-opacity));
+}
+
+/*
+ * Tabulator overrides
+ * ########################
+ */
+
+.tabulator .tabulator-footer {
+  display: flex !important;
+}
+
+.tabulator .tabulator-footer .tabulator-page-size {
+  padding: 2px 30px 2px 8px !important;
+}
+
+.tabulator-row .tabulator-cell {
+  cursor: auto !important;
 }
 
 .hover\:bg-green-700:hover {

@@ -1,10 +1,18 @@
 import './jquery.min.js';
-import * as Tabulator from './Vendors/tabulator.min.js';
+import './Vendors/tabulator.min.js';
 
 $(document).ready(function () {
 	checkHttp();
 	checkPort();
+	initTables();
 });
+
+function initTables() {
+	var table = new Tabulator("#wordlist-table", {
+		layout:"fitColumns",
+		movableColumns: true,
+	});
+}
 
 function checkPort() {
 	$('#check-port').click(function () {
