@@ -4,7 +4,7 @@
     "postcss": "^8.4.6",
     "postcss-import": "^14.0.2",
     "tailwindcss": "^3.0.18",
-    "vite": "^2.9.13"
+    "vite": "^2.9.16"
   },
   "scripts": {
     "build": "npx tailwindcss -i ./DistributionPackages/Pn3uma.App/Resources/Private/Styles/tailwind.css -o ./DistributionPackages/Pn3uma.App/Resources/Public/Styles/default.css --watch"
